@@ -1,0 +1,39 @@
+#body {
+  display: flex;
+}
+
+#body #side-bar {
+  flex: 0.18;
+}
+
+#body #side-bar .menu-item {
+  align-items: center;
+  padding: 0 44px;
+  display: flex;
+  height: 40px;
+}
+
+#body #side-bar .menu-item svg {
+  margin-right: 25px;
+}
+
+#body #side-bar .menu-item h3 {
+  margin: 0;
+
+  font-weight: 400;
+}
+
+#body #side-bar hr {
+  border: 1px solid lightgray;
+  margin: 12px 0;
+}
+
+#body #content {
+  flex: 0.82;
+  background-color: #f9f9f9;
+}
+
+.root {
+  flex-grow: 1;
+  margin: 16px;
+}

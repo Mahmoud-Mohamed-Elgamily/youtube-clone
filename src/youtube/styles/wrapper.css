@@ -1,0 +1,32 @@
+.video-wrapper>img {
+  width: 100%;
+  max-height: 216px;
+  object-fit: contain;
+}
+
+.video-wrapper .footer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.video-wrapper .footer .avatar {
+  flex: 0.15;
+}
+
+.video-wrapper .footer .details {
+  flex: 0.75;
+}
+
+.video-wrapper .footer .details h2 {
+  margin: 0 0 5px;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  max-height: 4rem;
+}
+
+.video-wrapper .footer .details p {
+  margin: 5px 0;
+  color: #606060;
+}

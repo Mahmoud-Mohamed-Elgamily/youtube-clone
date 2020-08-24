@@ -1,0 +1,44 @@
+#header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-bottom: 1px solid lightgray;
+}
+
+#header>div {
+  display: flex;
+}
+
+#header #left {
+  flex: 0.12;
+  justify-content: space-between;
+}
+
+#header #right {
+  flex: 0.25;
+  padding: 0 10px;
+  justify-content: space-between;
+}
+
+#header svg {
+  font-size: 2rem;
+  color: #4e4e4e;
+  cursor: pointer;
+}
+
+#header #center {
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  flex-basis: 728px;
+}
+
+#header #center input {
+  padding: 0 10px;
+  flex: 0.95;
+  border: unset;
+  border-right: 1px solid lightgray;
+}
+
+#header #center svg {
+  flex: 0.05;
+}
