@@ -9,6 +9,7 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import './styles/head.css'
 import axiosInstance from '../AXIOS/youtube';
 import { VideosContext } from '../context/VideosContext';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [searchValue, setSearchValue] = useState('')
@@ -28,7 +29,9 @@ const Header = () => {
     <div id="header">
       <div id="left">
         <MenuIcon />
-        <YouTubeIcon />
+        <Link to="/">
+          <YouTubeIcon />
+        </Link>
       </div>
       <div id="center">
         <input type="text"

@@ -1,0 +1,14 @@
+#videoPlayerPage {
+  display: flex;
+  margin-top: 16px;
+  justify-content: space-around;
+}
+
+#videoPlayerPage iframe{
+  height: 400px;
+  flex: .7;
+}
+
+#videoPlayerPage section{
+  flex: .2;
+}

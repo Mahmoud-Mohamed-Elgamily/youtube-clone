@@ -8,11 +8,14 @@ import HistoryIcon from '@material-ui/icons/History';
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 import WatchLaterIcon from '@material-ui/icons/WatchLater';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
     <div id="side-bar">
-      <MenuItem Icon={HomeIcon} title="Home" />
+      <Link to="/">
+        <MenuItem Icon={HomeIcon} title="Home" />
+      </Link>
       <MenuItem Icon={WhatshotIcon} title="Trending" />
       <MenuItem Icon={SubscriptionsIcon} title="Subscriptions" />
       <hr />

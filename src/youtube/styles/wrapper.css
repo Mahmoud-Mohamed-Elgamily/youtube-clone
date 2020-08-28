@@ -1,4 +1,4 @@
-.video-wrapper>img {
+.video-wrapper img.thumbnail {
   width: 100%;
   max-height: 216px;
   object-fit: contain;

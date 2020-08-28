@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './Header'
 import Sidebar from './Sidebar'
 import Body from './Body'
 import './styles/home.css'
 import axiosInstance from '../AXIOS/youtube'
 import { VideosContext } from '../context/VideosContext'
+import VideoPlayer from './VideoPlayer';
 
 const Home = () => {
   let [videos, setVideos] = useState(null);
@@ -15,7 +17,6 @@ const Home = () => {
       }
     })
       .then(data => {
-        console.log(data.data.items);
         setVideos(data.data.items)
       })
       .catch(err => console.log(err))
@@ -24,12 +25,15 @@ const Home = () => {
   return (
     <>
       {videos &&
-        <VideosContext.Provider value={{videos, setVideos}}>
-          <Header />
-          <div id="body">
-            <Sidebar />
-            <Body />
-          </div>
+        <VideosContext.Provider value={{ videos, setVideos }}>
+          <Router>
+            <Header />
+            <div id="body">
+              <Sidebar />
+              <Route exact path="/video-player" component={VideoPlayer} />
+              <Route exact path="/" component={Body} />
+            </div>
+          </Router>
         </VideosContext.Provider>
       }
     </>
